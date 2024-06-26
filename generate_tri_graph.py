@@ -78,7 +78,7 @@ class Generate_graph():
 
             return G
         
-        def send_adjacency_to_excel(G):
+        def send_adjacency_to_excel(G, scenario):
             # make an adjacency matrix of the graph G?
             adjacency_matrix = nx.adjacency_matrix(G)
             # Convert the sparse matrix to a dense NumPy array
