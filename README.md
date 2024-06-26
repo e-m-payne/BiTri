@@ -3,7 +3,7 @@
 Bipartite Tripartite visualization (BiTri) is an easy-to-use network analysis. BiTri assists in generating individual matrix information, developing a tripartite matrix from two bipartite matrices, and evaluating the interactions of this new network. This analysis helps to assess indirect interactions among tripartite networks. Where possible the data is returned in the form of an adjacency matrix for the Matlab portion of the analysis, graphs are generated from the connected nodes removal, and analysis data is returned in Pandas DataFrames.
 
 ## Notice
-06/26/2024 BiTri is currently going through a rebuild. Not all .py or .m files will be present at all times
+06/26/2024 BiTri is currently going through a rebuild. Not all .py or .m files will be present at all times or functional at all times.
 
 ## Citations
 If you use BiTri in any of your work, please use the citations below.
