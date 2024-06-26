@@ -1,13 +1,28 @@
 # BiTri
 
-The introduction summarizes the purpose and function of the project, and should be concise (a brief paragraph or two). This introduction may be the same as the first paragraph on the project page.
+Bipartite Tripartite visualization (BiTri) is an easy-to-use network analysis. BiTri assists in generating individual matrix information, developing a tripartite matrix from two bipartite matrices, and evaluating the interactions of this new network. This analysis helps to assess indirect interactions among tripartite networks. Where possible the data is returned in the form of an adjacency matrix for the Matlab portion of the analysis, graphs are generated from the connected nodes removal, and analysis data is returned in Pandas DataFrames.
 
-For a full description of the module, visit the
-[project page](https://www.drupal.org/project/admin_menu).
+## Citations
+If you use BiTri in any of your work, please use the citations below.
 
-Submit bug reports and feature suggestions, or track changes in the
-[issue queue](https://www.drupal.org/project/issues/admin_menu).
+```markdown
+@inproceedings{sun2023bio,
+  title={Bio-Inspired and AI DeepWalk Based Approach to Understand Cyber-Physical Interdependencies of Power Grid Infrastructure},
+  author={Sun, Shining and Payne, Emily and Layton, Astrid and Davis, Katherine and Hossain-McKenzie, Shamina and Jacobs, Nicholas},
+  booktitle={2023 North American Power Symposium (NAPS)},
+  pages={1--6},
+  year={2023},
+  organization={IEEE}
+}
 
+@article{jacobs2024leveraging,
+  title={Leveraging graph clustering techniques for cyber-physical system analysis to enhance disturbance characterisation},
+  author={Jacobs, Nicholas and Hossain-McKenzie, Shamina and Sun, Shining and Payne, Emily and Summers, Adam and Al-Homoud, Leen and Layton, Astrid and Davis, Kate and Goes, Chris},
+  journal={IET Cyber-Physical Systems: Theory \& Applications},
+  year={2024},
+  publisher={Wiley Online Library}
+}
+```
 
 ## Table of contents (optional)
 
