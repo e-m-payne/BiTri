@@ -9,16 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- v1.1 Brazilian Portuguese translation.
+- License
+- Continuous Integration
+- Documentation
 
 ### Changed
 
-- Use frontmatter title & description in each language version template
+- test_Matrix_info.py
+- pytest_Matrix_info.py
 
 ### Removed
 
-- Trademark sign previously shown after the project description in version 
-0.3.0
+- 
 
 ## [0.0.1] - 2014-05-31
 
@@ -33,16 +35,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Refer to a "change log" instead of a "CHANGELOG" throughout the site
+- Refer to a "Changelog" instead of a "CHANGELOG" throughout the site
   to differentiate between the file and the purpose of the file — the
   logging of changes.
 
-### Removed
-
-- Remove empty sections from CHANGELOG, they occupy too much space and
-  create too much noise in the file. People will have to assume that the
-  missing sections were intentionally left out because they contained no
-  notable changes.
-
-[unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v1.1.1...HEAD
+### Version List
+This is the full test of all versions and their respective locations.  
+[unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v1.1.1...HEAD  
 [0.0.1]: https://github.com/olivierlacan/keep-a-changelog/releases/tag/v0.0.1
