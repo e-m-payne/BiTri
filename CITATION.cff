@@ -1,0 +1,11 @@
+cff-version: 0.0.1
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Payne"
+  given-names: "Emily"
+  orcid: "https://orcid.org/0009-0004-4454-3549"
+title: "BiTri"
+version: 0.0.1
+doi: TBD Please see CITATIONS in READMDE.md
+date-released: 2024-06-26
+url: "https://github.com/e-m-payne/BiTri"
