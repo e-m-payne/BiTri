@@ -73,6 +73,70 @@ class Paper_BiTri_functions():
             print("Node Categories:")
             print(node_categories)
             return node_categories
+        
+        def make_df_from_node_cat(node_categories):
+            df_node_cat = pd.DataFrame.from_dict(node_categories)
+
+            # Function to assign category based on state name
+            def assign_category(row):
+                location = row['Node']
+                if 'R' in location:
+                    return 'Relay'
+                elif 'B' in location:
+                    return 'Bus'
+                elif 'G' in location:
+                    return 'Generator'
+                elif 'L' in location:
+                    return 'Load'
+                elif 'FW' in location:
+                    return 'FW'
+                elif 'HMI' in location:
+                    return 'HMI'
+                elif 'S' in location:
+                    return 'S'
+                elif 'SW' in location:
+                    return 'SW'
+                elif 'UCC' in location:
+                    return 'Control Center'
+                elif 'router' in location:
+                    return 'router'
+                else:
+                    return 'Unknown'  # Handle any unexpected values
+
+            # Apply function to assign 'Climate Zone' column based on 'Climate Region'
+            df_node_cat['Class'] = df_node_cat.apply(lambda row: assign_category(row), axis=1)
+            return df_node_cat
+        
+        def make_node_cat_plots(df_node_cat):
+            role_counts = df_node_cat['Role'].value_counts()
+            plt.figure(figsize=(7, 7))
+            plt.pie(role_counts, labels=role_counts.index, autopct='%1.1f%%', startangle=140)
+            plt.title('Distribution of Node Roles')
+            plt.show()
+            return
+        
+        def make_node_cat_barplot(df):
+            # Stacked Bar Chart for Node Roles within each Class normalized by the maximum number of nodes in any column
+            # Prepare data for chart
+            class_role_counts_new = df.groupby(['Class', 'Role']).size().unstack(fill_value=0)
+
+            # Normalize the data by the maximum value in the entire DataFrame to get the proportion
+            max_node_count = len(df['Class'])
+            class_role_counts_normalized = class_role_counts_new / max_node_count
+
+            # Plot
+            class_role_counts_normalized.plot(kind='bar', stacked=True, figsize=(10, 7))
+
+            # Title and labels
+            plt.title('Node Roles within each Class (Normalized by Max Node Count)')
+            plt.xlabel('Class')
+            plt.ylabel('Proportion of Nodes')
+            plt.legend(title='Role')
+            plt.ylim(0,.25)
+
+            # Display the plot
+            plt.show()
+            return
 
         def ecological_error_tolerance(graph):
             # Calculate the size of the largest connected component before failure
